@@ -61,11 +61,13 @@ class Program
             // Check walls collision for bouncing
             if ((ballPosition.X >= (Raylib.GetScreenWidth() - ballRadius)))
             {
+                ballPosition = new(screenWidth / 2, (screenHeight / 2) + 22);
                 ballSpeed.X *= -1.0f;
                 p1++;
             }
             if((ballPosition.X <= ballRadius))
             {
+                ballPosition = new(screenWidth / 2, (screenHeight / 2) + 22);
                 ballSpeed.X *= -1.0f;
                 p2++;
             }
